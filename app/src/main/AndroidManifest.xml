@@ -17,6 +17,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".SelectWay">
+        </activity>
+
+        <activity android:name=".StudentInfo">
+        </activity>
+
+        <activity android:name=".DormInfo">
+        </activity>
+
     </application>
 
 </manifest>
