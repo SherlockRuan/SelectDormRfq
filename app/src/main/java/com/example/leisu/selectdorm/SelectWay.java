@@ -64,8 +64,9 @@ public class SelectWay extends Activity implements View.OnClickListener {
 
         if (view.getId() == R.id.sel_btn_3) {
             Toast.makeText(SelectWay.this,"选择宿舍!", Toast.LENGTH_LONG).show();
-            //Intent i4 = new Intent(this,StudentInfo.class);
-            //startActivity(i4);
+            Intent i4 = new Intent(this,SelectDorm.class);
+            startActivity(i4);
+            //finish();
         }
     }
 }

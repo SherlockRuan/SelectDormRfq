@@ -2,25 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45.0dip"
-        android:id="@+id/stu_title"
+        android:id="@+id/sel_one_title"
         android:background="#0d44ea"
         android:gravity="center_vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/stu_title_text"
+            android:id="@+id/sel_one_title_text"
             android:gravity="center"
-            android:text="个人信息"
+            android:text="单人办理"
             android:textColor="#faf9f9"
             android:textSize="22.0dip"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/stu_bb"
+            android:id="@+id/sel_one_bb"
             android:text="返回"
             android:textSize="20dip"
             android:textColor="#ffffff"
@@ -31,7 +32,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/stu_title"
+        android:layout_below="@+id/sel_one_title"
         android:id="@+id/stu_under">
 
         <TextView
@@ -168,7 +169,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sushehao_r"
-            android:text="5115"
+            android:text="------"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian4"
@@ -198,7 +199,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sushehlou_r"
-            android:text="5号楼"
+            android:text="------"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian5"
@@ -218,7 +219,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/xiaoqu"
-            android:text="校区"
+            android:text="状态"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian6"
@@ -228,7 +229,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/xiaoqu_r"
-            android:text="大兴"
+            android:text="未办理"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian6"
@@ -248,22 +249,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nianji"
-            android:text="年级"
+            android:text="请选择楼号"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian7"
             android:layout_marginLeft="20dip" />
 
-        <TextView
-            android:layout_width="match_parent"
+        <EditText
+            android:layout_width="100dip"
             android:layout_height="wrap_content"
-            android:id="@+id/nianji_r"
-            android:text="2017届"
-            android:textColor="#000000"
+            android:hint="如:5,13"
+            android:textColorHint="#bfc4bf"
             android:textSize="28.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
             android:layout_below="@+id/hengxian7"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
+            android:layout_alignRight="@+id/hengxian7"
+            android:layout_alignEnd="@+id/hengxian7"
+            android:id="@+id/edit_one"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -274,14 +277,17 @@
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/map"
-            android:layout_below="@id/hengxian8"
-            android:id="@+id/stu_map"
-            android:layout_centerHorizontal="true" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sel_1_start"
+            android:text="确认"
+            android:textColor="#27d3f5"
+            android:textSize="28.0dip"
+            android:gravity="center"
+            android:layout_below="@+id/hengxian8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp" />
 
     </RelativeLayout>
 

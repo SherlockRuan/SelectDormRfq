@@ -26,6 +26,12 @@
         <activity android:name=".DormInfo">
         </activity>
 
+        <activity android:name=".SelectDorm">
+        </activity>
+
+        <activity android:name=".SelectOne">
+        </activity>
+
     </application>
 
 </manifest>

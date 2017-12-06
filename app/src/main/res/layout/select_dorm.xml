@@ -2,25 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45.0dip"
-        android:id="@+id/stu_title"
+        android:id="@+id/sel_dorm_title"
         android:background="#0d44ea"
         android:gravity="center_vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/stu_title_text"
+            android:id="@+id/sel_dorm_title_text"
             android:gravity="center"
-            android:text="个人信息"
+            android:text="选择宿舍"
             android:textColor="#faf9f9"
             android:textSize="22.0dip"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/stu_bb"
+            android:id="@+id/sel_dorm_bb"
             android:text="返回"
             android:textSize="20dip"
             android:textColor="#ffffff"
@@ -31,35 +32,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/stu_title"
-        android:id="@+id/stu_under">
+        android:layout_below="@+id/sel_dorm_title"
+        android:id="@+id/sel_dorm_under">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xuehao"
-            android:text="学号"
+            android:id="@+id/sel_way"
+            android:text="请选择人数："
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_marginLeft="20dip"
             android:layout_marginTop="5.0dip"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/xuehao_r"
-            android:text="1701210999"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_marginRight="20dip"
-            android:layout_marginTop="5.0dip"
-            android:gravity="right" />
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/xuehao"
+            android:layout_below="@+id/sel_way"
             android:id="@+id/hengxian1"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip"/>
@@ -67,8 +57,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xingming"
-            android:text="姓名"
+            android:id="@+id/sel_1"
+            android:text="单人"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian1"
@@ -77,9 +67,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/xingming_r"
-            android:text="李白"
-            android:textColor="#000000"
+            android:id="@+id/sel_1_r"
+            android:text="点击此处办理"
+            android:textColor="#27d3f5"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian1"
             android:layout_marginRight="20dip"
@@ -89,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/xingming"
+            android:layout_below="@+id/sel_1"
             android:id="@+id/hengxian2"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
@@ -97,8 +87,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xingbie"
-            android:text="性别"
+            android:id="@+id/sel_2"
+            android:text="双人"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian2"
@@ -107,9 +97,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/xingbie_r"
-            android:text="男"
-            android:textColor="#000000"
+            android:id="@+id/sel_2_r"
+            android:text="点击此处办理"
+            android:textColor="#27d3f5"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian2"
             android:layout_marginRight="20dip"
@@ -119,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/xingbie"
+            android:layout_below="@+id/sel_2"
             android:id="@+id/hengxian3"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
@@ -127,8 +117,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/yanzhengma"
-            android:text="验证码"
+            android:id="@+id/sel_3"
+            android:text="三人"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian3"
@@ -137,9 +127,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/yanzhengma_r"
-            android:text="F4DS6T"
-            android:textColor="#000000"
+            android:id="@+id/sel_3_r"
+            android:text="点击此处办理"
+            android:textColor="#27d3f5"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian3"
             android:layout_marginRight="20dip"
@@ -149,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/yanzhengma"
+            android:layout_below="@+id/sel_3"
             android:id="@+id/hengxian4"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
@@ -157,8 +147,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sushehao"
-            android:text="宿舍号"
+            android:id="@+id/sel_4"
+            android:text="四人"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian4"
@@ -167,9 +157,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sushehao_r"
-            android:text="5115"
-            android:textColor="#000000"
+            android:id="@+id/sel_4_r"
+            android:text="点击此处办理"
+            android:textColor="#27d3f5"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian4"
             android:layout_marginRight="20dip"
@@ -179,98 +169,8 @@
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/sushehao"
+            android:layout_below="@+id/sel_4"
             android:id="@+id/hengxian5"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sushelou"
-            android:text="宿舍楼"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian5"
-            android:layout_marginLeft="20dip" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sushehlou_r"
-            android:text="5号楼"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian5"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dip"
-            android:src="@drawable/hengxian"
-            android:layout_below="@+id/sushelou"
-            android:id="@+id/hengxian6"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/xiaoqu"
-            android:text="校区"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian6"
-            android:layout_marginLeft="20dip" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/xiaoqu_r"
-            android:text="大兴"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian6"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dip"
-            android:src="@drawable/hengxian"
-            android:layout_below="@+id/xiaoqu"
-            android:id="@+id/hengxian7"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nianji"
-            android:text="年级"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian7"
-            android:layout_marginLeft="20dip" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/nianji_r"
-            android:text="2017届"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian7"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dip"
-            android:src="@drawable/hengxian"
-            android:layout_below="@+id/nianji"
-            android:id="@+id/hengxian8"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
 
@@ -278,11 +178,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/map"
-            android:layout_below="@id/hengxian8"
+            android:layout_below="@id/hengxian5"
             android:id="@+id/stu_map"
-            android:layout_centerHorizontal="true" />
-
-
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dip"/>
     </RelativeLayout>
 
 </RelativeLayout>

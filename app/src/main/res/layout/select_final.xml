@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:id="@+id/sel_fin_title"
+        android:background="#0d44ea"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sel_fin_title_text"
+            android:gravity="center"
+            android:text="办理成功"
+            android:textColor="#faf9f9"
+            android:textSize="22.0dip"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sel_fin_title"
+        android:id="@+id/sel_fin_under">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="20.0dip"
+            android:text="     恭喜你已经成功办理！请于20XX年X月X日持身份证和录取通知书以及本办理证明到5号楼办理入住手续。"
+            android:textColor="#000000"
+            android:textSize="20.0dip"
+            android:id="@+id/sel_fin_t1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sel_fin_t2"
+            android:text="北京大学欢迎你!"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="20dip"
+            android:layout_below="@+id/sel_fin_t1"
+            android:textSize="28.0dip"
+            android:textColor="#ff0000" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33ff00"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:id="@+id/sel_fin_btn"
+            android:layout_below="@id/sel_fin_t2"
+            android:layout_marginTop="30dip"
+            android:text="点击返回查看个人信息"
+            android:textColor="#ffffff"
+            android:textSize="25.0dip"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
