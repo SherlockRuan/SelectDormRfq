@@ -32,6 +32,18 @@
         <activity android:name=".SelectOne">
         </activity>
 
+        <activity android:name=".SelectFinal">
+        </activity>
+
+        <activity android:name=".SelectTwo">
+        </activity>
+
+        <activity android:name=".SelectThree">
+        </activity>
+
+        <activity android:name=".SelectFour">
+        </activity>
+
     </application>
 
 </manifest>

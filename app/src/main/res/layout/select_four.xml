@@ -2,36 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45.0dip"
-        android:id="@+id/stu_title"
+        android:id="@+id/sel_four_title"
         android:background="#0d44ea"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/stu_title_text"
+            android:id="@+id/sel_four_title_text"
             android:gravity="center"
-            android:text="个人信息"
+            android:text="四人办理"
             android:textColor="#faf9f9"
             android:textSize="22.0dip"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/stu_bb"
+            android:id="@+id/sel_four_bb"
             android:text="返回"
             android:textSize="20dip"
             android:textColor="#ffffff"
             android:gravity="left"
             android:layout_marginTop="10dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="确认"
+            android:textSize="28.0dip"
+            android:gravity="right"
+            android:textColor="#ffffff"
+            android:id="@+id/sel_4_start"
+            android:layout_alignBaseline="@+id/sel_three_bb"
+            android:layout_alignBottom="@+id/sel_three_bb"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/stu_title"
+        android:layout_below="@+id/sel_four_title"
         android:id="@+id/stu_under">
 
         <TextView
@@ -157,81 +176,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sushehao"
-            android:text="宿舍号"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian4"
-            android:layout_marginLeft="20dip" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sushehao_r"
-            android:text="5115"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian4"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dip"
-            android:src="@drawable/hengxian"
-            android:layout_below="@+id/sushehao"
-            android:id="@+id/hengxian5"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sushelou"
-            android:text="宿舍楼"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian5"
-            android:layout_marginLeft="20dip" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sushehlou_r"
-            android:text="5号楼"
-            android:textColor="#000000"
-            android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian5"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dip"
-            android:src="@drawable/hengxian"
-            android:layout_below="@+id/sushelou"
-            android:id="@+id/hengxian6"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/xiaoqu"
-            android:text="校区"
+            android:text="状态"
             android:textColor="#000000"
             android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian6"
+            android:layout_below="@+id/hengxian4"
             android:layout_marginLeft="20dip" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/xiaoqu_r"
-            android:text="大兴"
+            android:text="未办理"
             android:textColor="#000000"
             android:textSize="28.0dip"
-            android:layout_below="@+id/hengxian6"
+            android:layout_below="@+id/hengxian4"
             android:layout_marginRight="20dip"
             android:gravity="right"/>
 
@@ -247,41 +206,232 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nianji"
-            android:text="年级"
+            android:id="@+id/louhao"
+            android:text="请选择楼号"
             android:textColor="#000000"
             android:textSize="28.0dip"
             android:layout_below="@+id/hengxian7"
             android:layout_marginLeft="20dip" />
 
-        <TextView
-            android:layout_width="match_parent"
+        <EditText
+            android:layout_width="100dip"
             android:layout_height="wrap_content"
-            android:id="@+id/nianji_r"
-            android:text="2017届"
-            android:textColor="#000000"
+            android:hint="如:5,13"
+            android:textColorHint="#bfc4bf"
             android:textSize="28.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
             android:layout_below="@+id/hengxian7"
-            android:layout_marginRight="20dip"
-            android:gravity="right"/>
+            android:layout_alignRight="@+id/hengxian7"
+            android:layout_alignEnd="@+id/hengxian7"
+            android:id="@+id/edit_one"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="5dip"
             android:src="@drawable/hengxian"
-            android:layout_below="@+id/nianji"
+            android:layout_below="@+id/louhao"
             android:id="@+id/hengxian8"
             android:layout_marginLeft="15dip"
             android:layout_marginRight="15dip" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren1_xh"
+            android:text="同住人1学号"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian8"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="学号"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian8"
+            android:layout_alignRight="@+id/hengxian8"
+            android:layout_alignEnd="@+id/hengxian8"
+            android:id="@+id/tongzhuren1_xh_r"
+            android:layout_above="@+id/hengxian9" />
+
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/map"
-            android:layout_below="@id/hengxian8"
-            android:id="@+id/stu_map"
-            android:layout_centerHorizontal="true" />
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren1_xh"
+            android:id="@+id/hengxian9"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren1_yz"
+            android:text="同住人1验证码"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian9"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian9"
+            android:layout_alignRight="@+id/hengxian9"
+            android:layout_alignEnd="@+id/hengxian9"
+            android:id="@+id/tongzhuren1_yz_r"
+            android:layout_above="@+id/hengxian10" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren1_yz"
+            android:id="@+id/hengxian10"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren2_xh"
+            android:text="同住人2学号"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian10"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="学号"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian10"
+            android:layout_alignRight="@+id/hengxian10"
+            android:layout_alignEnd="@+id/hengxian10"
+            android:id="@+id/tongzhuren2_xh_r"
+            android:layout_above="@+id/hengxian11" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren2_xh"
+            android:id="@+id/hengxian11"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren2_yz"
+            android:text="同住人2验证码"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian11"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian11"
+            android:layout_alignRight="@+id/hengxian11"
+            android:layout_alignEnd="@+id/hengxian11"
+            android:id="@+id/tongzhuren2_yz_r"
+            android:layout_above="@+id/hengxian12" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren2_yz"
+            android:id="@+id/hengxian12"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren3_xh"
+            android:text="同住人3学号"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian12"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="学号"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian12"
+            android:layout_alignRight="@+id/hengxian12"
+            android:layout_alignEnd="@+id/hengxian12"
+            android:id="@+id/tongzhuren3_xh_r"
+            android:layout_above="@+id/hengxian13" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren3_xh"
+            android:id="@+id/hengxian13"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tongzhuren3_yz"
+            android:text="同住人3验证码"
+            android:textColor="#000000"
+            android:textSize="28.0dip"
+            android:layout_below="@+id/hengxian13"
+            android:layout_marginLeft="20dip" />
+
+        <EditText
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:textColorHint="#bfc4bf"
+            android:textSize="15.0dip"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:layout_below="@+id/hengxian13"
+            android:layout_alignRight="@+id/hengxian13"
+            android:layout_alignEnd="@+id/hengxian13"
+            android:id="@+id/tongzhuren3_yz_r"
+            android:layout_above="@+id/hengxian14" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:src="@drawable/hengxian"
+            android:layout_below="@+id/tongzhuren3_yz"
+            android:id="@+id/hengxian14"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip" />
 
     </RelativeLayout>
 

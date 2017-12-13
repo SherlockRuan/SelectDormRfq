@@ -49,21 +49,21 @@ public class SelectDorm extends Activity implements View.OnClickListener{
 
         if (view.getId() == R.id.sel_2_r) {
             Toast.makeText(SelectDorm.this,"选择双人办理!", Toast.LENGTH_LONG).show();
-            Intent i2 = new Intent(SelectDorm.this,StudentInfo.class);
+            Intent i2 = new Intent(SelectDorm.this,SelectTwo.class);
             startActivity(i2);
             //finish();
         }
 
         if (view.getId() == R.id.sel_3_r) {
             Toast.makeText(SelectDorm.this,"选择三人办理!", Toast.LENGTH_LONG).show();
-            Intent i3 = new Intent(SelectDorm.this,DormInfo.class);
+            Intent i3 = new Intent(SelectDorm.this,SelectThree.class);
             startActivity(i3);
             //finish();
         }
 
         if (view.getId() == R.id.sel_4_r) {
             Toast.makeText(SelectDorm.this,"选择四人办理!", Toast.LENGTH_LONG).show();
-            Intent i4 = new Intent(SelectDorm.this,StudentInfo.class);
+            Intent i4 = new Intent(SelectDorm.this,SelectFour.class);
             startActivity(i4);
             //finish();
         }
