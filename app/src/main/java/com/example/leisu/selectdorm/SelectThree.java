@@ -14,8 +14,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -114,10 +116,7 @@ public class SelectThree extends Activity implements View.OnClickListener {
             v1code = tongzhuren1_yz.getText().toString();
             stu2id = tongzhuren2_xh.getText().toString();
             v2code = tongzhuren2_yz.getText().toString();
-
-
-
-            //finish();
+            jsonPost();
         }
     }
 
@@ -169,6 +168,67 @@ public class SelectThree extends Activity implements View.OnClickListener {
         }) .start();
     }
 
+    public void jsonPost() {
+        //首先声明一下Url
+        final String urlPath = "https://api.mysspku.com/index.php/V1/MobileCourse/SelectRoom";
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    MyX509TrustManager.allowAllSSL();
+                    URL url = new URL(urlPath);
+                    JSONObject ClientKey = new JSONObject();
+                    ClientKey.put("num", 2);
+                    ClientKey.put("stuid", stuId);
+                    ClientKey.put("buildingNo", Integer.valueOf(build));
+                    ClientKey.put("stu1id", stu1id);
+                    ClientKey.put("v1code", v1code);
+                    ClientKey.put("stu2id", stu2id);
+                    ClientKey.put("v2code", v2code);
+                    ClientKey.put("stu3id", "");
+                    ClientKey.put("v3code", "");
+                    // JSONObject Authorization = new JSONObject();
+                    //Authorization.put("Person", ClientKey);
+                    String content = String.valueOf(ClientKey);
+                    Log.d("url_c", content);
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();// 已经封装好了数据,接着要把封装好的数据传递过去
+                    conn.setConnectTimeout(8000);
+                    conn.setDoOutput(true);// 设置允许输出
+                    conn.setDoInput(true);
+                    conn.setRequestMethod("POST");
+                    //conn.setRequestProperty("ser-Agent", "Fiddler");// 设置User-Agent: Fiddler
+                    //conn.setRequestProperty("Content-Type", "application/json");// 设置contentType
+                    if (ClientKey != null) {
+                        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(conn.getOutputStream(), "utf-8");
+                        BufferedWriter bw = new BufferedWriter(outputStreamWriter);
+                        bw.write(content);
+                        bw.close();
+                        //OutputStream os = conn.getOutputStream();
+                        //os.write(content.getBytes());
+                        //os.close();
+                    }
+                    int code = conn.getResponseCode();//服务器返回的响应码
+                    if (code == 200) { // 等于200了,下面就可以获取服务器的数据了
+                        Log.d("url_res", String.valueOf(code));
+                        InputStream is = conn.getInputStream();// 已经连接上了，也获得了服务器的数据了，接着就是解析服务器传递过来的数据，开始解析服务器传递过来的参数,
+                        String json = NetUtils.readString(is);//json就已经是{"Person":{"username":"zhangsan","age":"12"}} //这个形式了,只不过是String类型
+                        JSONObject jsonObject = new JSONObject(json);//然后我们把json转换成JSONObject类型得到{"Person": //{"username":"zhangsan","age":"12"}}
+                        errorcode2 = jsonObject.getInt("errcode");
+                        if (errorcode2 == 0) {
+                            Message msg = new Message();
+                            msg.what = 2;
+                            msg.obj = errorcode2;
+                            mHandler.sendMessage(msg);
+                        }
+                    } else {
+                        Log.d("url_res", "数据提交失败");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
 
     public int getErrorcode (String json) {
         int code = 1;
@@ -182,17 +242,6 @@ public class SelectThree extends Activity implements View.OnClickListener {
         return code;
     }
 
-    public int getErrorcode2 (String json) {
-        int code = 1;
-        try{
-            JSONObject obj = new JSONObject(json);
-            code = obj.getInt("error_code");
-            Log.d("url_error_code",String.valueOf(code));
-        }catch(JSONException e) {
-            e.printStackTrace();
-        }
-        return code;
-    }
 
     public String getVcode(String json) {
         String code = "";
