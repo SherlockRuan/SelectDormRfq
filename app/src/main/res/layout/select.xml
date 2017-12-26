@@ -51,7 +51,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="F4DS6T"
+            android:text="asdf12"
             android:layout_below="@+id/sel_text1"
             android:layout_marginTop="10.0dip"
             android:layout_marginLeft="25.0dip"

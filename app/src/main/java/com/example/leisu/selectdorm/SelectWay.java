@@ -34,7 +34,7 @@ public class SelectWay extends Activity implements View.OnClickListener {
     private String xuehao;
     private String vcode;
     private String gender;
-    private String room;
+    private String room = "未选择";
     private int errorcode;
 
     private Handler mHandler = new Handler() {
@@ -99,10 +99,15 @@ public class SelectWay extends Activity implements View.OnClickListener {
         }
 
         if (view.getId() == R.id.sel_btn_3) {
-            Toast.makeText(SelectWay.this,"选择宿舍!", Toast.LENGTH_LONG).show();
-            Intent i4 = new Intent(this,SelectDorm.class);
-            startActivity(i4);
-            //finish();
+            //Toast.makeText(SelectWay.this,"选择宿舍!", Toast.LENGTH_LONG).show();
+            if (room.equals("")) {
+                Intent i4 = new Intent(this,SelectDorm.class);
+                i4.putExtra("student", xuehao);
+                startActivity(i4);
+                //finish();
+            }else {
+                Toast.makeText(SelectWay.this,"已经选择了宿舍!无法更改!", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -132,12 +137,10 @@ public class SelectWay extends Activity implements View.OnClickListener {
                     String responseStr = response.toString();
                     Log.d("url",responseStr);
                     errorcode = getErrorcode(responseStr);
+                    vcode = getVcode(responseStr);
+                    gender = getGender(responseStr);
+                    room = getRoom(responseStr);
                     if (errorcode == 0) {
-                        vcode = getVcode(responseStr);
-                        gender = getGender(responseStr);
-                        room = getRoom(responseStr);
-                    }
-                    if (vcode != null) {
                         Log.d("url", String.valueOf(vcode));
                         Message msg =new Message();
                         msg.what = 1;
