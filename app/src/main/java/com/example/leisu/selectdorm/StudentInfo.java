@@ -104,6 +104,7 @@ public class StudentInfo extends Activity implements View.OnClickListener{
 
         if (view.getId() == R.id.stu_bb) {
             Intent i2 = new Intent(StudentInfo.this,SelectWay.class);
+            i2.putExtra("number",stuId);
             startActivity(i2);
         }
     }

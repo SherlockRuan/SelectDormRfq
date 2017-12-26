@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/wel_under"
-        android:background="#f0f0f0"
+        android:background="#1ddfdf"
         android:layout_below="@+id/wel_title">
         <TextView
             android:layout_width="match_parent"

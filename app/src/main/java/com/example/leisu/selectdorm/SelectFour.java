@@ -113,6 +113,7 @@ public class SelectFour extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.sel_four_bb) {
             Intent i1 = new Intent(SelectFour.this,SelectDorm.class);
+            i1.putExtra("student",stuId);
             startActivity(i1);
             //finish();
         }

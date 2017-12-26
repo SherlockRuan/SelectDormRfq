@@ -80,6 +80,7 @@ public class SelectDorm extends Activity implements View.OnClickListener{
 
         if (view.getId() == R.id.sel_dorm_bb) {
             Intent i5 = new Intent(SelectDorm.this,SelectWay.class);
+            i5.putExtra("number",xuehao);
             startActivity(i5);
             //finish();
         }

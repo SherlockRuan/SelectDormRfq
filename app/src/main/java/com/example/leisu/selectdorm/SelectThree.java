@@ -106,6 +106,7 @@ public class SelectThree extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.sel_three_bb) {
             Intent i1 = new Intent(SelectThree.this,SelectDorm.class);
+            i1.putExtra("student",stuId);
             startActivity(i1);
             //finish();
         }

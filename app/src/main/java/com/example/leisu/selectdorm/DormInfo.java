@@ -32,6 +32,7 @@ public class DormInfo extends Activity implements View.OnClickListener{
     private TextView back;
     private String gender;
     private int errorcode;
+    private String stuId;
     private int k5;
     private int k13;
     private int k14;
@@ -72,6 +73,7 @@ public class DormInfo extends Activity implements View.OnClickListener{
 
         Intent intent = this.getIntent();
         gender = intent.getStringExtra("gender");
+        stuId = intent.getStringExtra("stuId");
         Log.d("gender",gender);
         query(gender);
     }
@@ -81,6 +83,7 @@ public class DormInfo extends Activity implements View.OnClickListener{
         if (view.getId() == R.id.dor_bb) {
             Intent i1 = new Intent(DormInfo.this,SelectWay.class);
             i1.setClass(DormInfo.this,SelectWay.class);
+            i1.putExtra("number",stuId);
             startActivity(i1);
         }
         /*if (view.getId() == R.id.dor_back) {

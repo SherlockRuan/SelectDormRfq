@@ -94,6 +94,7 @@ public class SelectWay extends Activity implements View.OnClickListener {
             Toast.makeText(SelectWay.this,"查看宿舍信息!", Toast.LENGTH_LONG).show();
             Intent i3 = new Intent(SelectWay.this,DormInfo.class);
             i3.putExtra("gender", gender);
+            i3.putExtra("stuId",xuehao);
             startActivity(i3);
             //finish();
         }

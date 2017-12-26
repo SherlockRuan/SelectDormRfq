@@ -11,6 +11,7 @@ import android.widget.Toast;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.text.method.PasswordTransformationMethod;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -71,6 +72,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         wel_xuehao = (EditText)findViewById(R.id.wel_edit_xuehao);
         wel_mima = (EditText)findViewById(R.id.wel_edit_mima);
+        wel_mima.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
         test = (TextView)findViewById(R.id.wel_title_text);
         test.setOnClickListener(this);

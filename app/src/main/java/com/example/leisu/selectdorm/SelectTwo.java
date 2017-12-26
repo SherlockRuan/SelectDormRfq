@@ -100,6 +100,7 @@ public class SelectTwo extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.sel_two_bb) {
             Intent i1 = new Intent(SelectTwo.this,SelectDorm.class);
+            i1.putExtra("student",stuId);
             startActivity(i1);
             //finish();
         }
